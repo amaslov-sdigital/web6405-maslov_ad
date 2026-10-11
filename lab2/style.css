@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+.left {
+    text-align: left;
+}
+
+
+#heading {
+    text-align: right;
+    background-color: lightgray;
+}
