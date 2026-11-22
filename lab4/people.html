@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Слоны и человек</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>
+        <a href="index.html">Общая информация</a> |
+        <a href="art.html">Слоны в искусстве</a> |
+        <a href="people.html">Слоны и человек</a>
+    </p>
+    <h1>Слоны и человек</h1>
+    <p>Люди использовали слонов для перевозки грузов и в военных походах. Сегодня охрана слонов связана с борьбой с браконьерством и сохранением мест их обитания.</p>
+    <h4>Слон и человек: сравнительная таблица</h4>
+    <table class="comparison">
+        <tr class="comparison__row comparison__row_header">
+            <td><b>Критерий</b></td>
+            <td><b>Слон</b></td>
+            <td><b>Человек</b></td>
+        </tr>
+        <tr class="comparison__row">
+            <td class="comparison__criterion">Нос</td>
+            <td>Может поднять еду</td>
+            <td>Может понюхать еду</td>
+        </tr>
+        <tr class="comparison__row">
+            <td class="comparison__criterion">Размер</td>
+            <td>Большой как слон</td>
+            <td>Стандартный</td>
+        </tr>
+        <tr class="comparison__row">
+            <td class="comparison__criterion">Общение</td>
+            <td>Трубит</td>
+            <td>Разговаривает</td>
+        </tr>
+        <tr class="comparison__row">
+            <td class="comparison__criterion">Социум</td>
+            <td>Всегда живут семьями</td>
+            <td>Не всегда живут семьями</td>
+        </tr>
+    </table>
+    <img src="images/elephant_and_human.png" alt="Сравнение роста человека, слонёнка и взрослого слона">
+    <p>Отправьте своё фото в полный рост (желательно на белом фоне), обрезав его по шаблону:</p>
+    <img src="images/photo-template.avif" width="200" alt="Шаблон обрезки фото в полный рост">
+    <form class="photo-form" action="http://localhost:3000/photo" method="post" enctype="multipart/form-data">
+        <p>
+            <label>Фото: <input class="photo-form__input" type="file" name="photo" accept="image/*" required></label>
+        </p>
+        <p>
+            <label>Ваш рост: <input class="photo-form__input" type="number" name="height" min="1" max="299" required> см</label>
+        </p>
+        <p>
+            <label>Ваш адрес электронной почты <input class="photo-form__input" type="email" name="email" required></label>
+        </p>
+        <button class="photo-form__button" type="submit">Получить фото со слоном</button>
+    </form>
+</body>
+</html>
