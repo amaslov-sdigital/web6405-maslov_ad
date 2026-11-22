@@ -1,0 +1,88 @@
+:root {
+    --page-color: #f2f6ef;
+    --card-back-color: #f6e9d3;
+    --table-border-color: black;
+    --table-heading-color: lightgray;
+}
+
+body {
+    background-color: var(--page-color);
+    font-family: Arial, sans-serif;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px;
+}
+
+.intro__text {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+.intro__photo {
+    width: 350px;
+    max-width: 100%;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+    gap: 24px;
+}
+
+.art-card {
+    perspective: 900px;
+}
+
+.art-card__inner {
+    position: relative;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.art-card__front,
+.art-card__back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+}
+
+.art-card__back {
+    padding: 16px;
+    background-color: var(--card-back-color);
+    transform: rotateY(180deg);
+}
+
+.art-card__title {
+    font-size: 18px;
+}
+
+.art-card:hover .art-card__inner {
+    transform: rotateY(180deg);
+}
+
+.comparison {
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid var(--table-border-color);
+    text-align: center;
+}
+
+.comparison__criterion {
+    text-align: left;
+}
+
+.comparison__row_header {
+    text-align: right;
+    background-color: var(--table-heading-color);
+}
+
+.photo-form__input,
+.photo-form__button {
+    font-family: inherit;
+}
